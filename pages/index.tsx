@@ -42,7 +42,7 @@ export default function Home() {
   });
   const [returnSourceDocuments, setReturnSourceDocuments] =
     useState<boolean>(false);
-  const [modelTemperature, setModelTemperature] = useState<number>(0.5);
+  const [modelTemperature, setModelTemperature] = useState<number>(0.1);
   const [userEmail, setUserEmail] = useState<string>('');
   const [userName, setUserName] = useState<string>('');
   const [userImage, setUserImage] = useState<string>('');
