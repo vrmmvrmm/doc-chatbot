@@ -27,7 +27,7 @@
     "dotenv": "^16.0.3",
     "formidable": "^2.1.1",
     "heroicons": "^2.0.17",
-    "langchain": "0.0.55",
+    "langchain": "0.0.86",
     "lucide-react": "^0.125.0",
     "mammoth": "^1.5.1",
     "mongoose": "^7.1.0",

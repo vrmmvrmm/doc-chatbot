@@ -10,6 +10,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import Namespace from '@/models/Namespace';
 import connectDB from '@/utils/mongoConnection';
+import { UnstructuredDirectoryLoader } from 'langchain/document_loaders/fs/unstructured';
 
 const filePath = process.env.NODE_ENV === 'production' ? '/tmp' : 'tmp';
 
@@ -42,6 +43,9 @@ export default async function handler(
       '.docx': (path) => new DocxLoader(path),
       '.txt': (path) => new TextLoader(path),
     });
+
+    // Load PDF files using Unstructured.io
+    // const directoryLoader = new UnstructuredDirectoryLoader(filePath, {});
 
     const rawDocs = await directoryLoader.load();
 
